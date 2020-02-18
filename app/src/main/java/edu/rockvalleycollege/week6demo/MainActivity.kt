@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         android.R.layout.simple_spinner_dropdown_item
         spin.adapter = adapter1
         //Challenge: set focus on txtFN. Look at Week 5 Assignment
-        txtFN.requestFocus()
+        
         btnSub.setOnClickListener{
             //Challenge: Put the output on seperate lines using \n
             //Example:
@@ -33,18 +33,18 @@ class MainActivity : AppCompatActivity() {
             //Email: ckonkol@gmail.com
             //How did you find us? TV
             when (spin.selectedItem.toString()){
-                "Online" -> txtShow.text = "Name: ${txtFN.text.toString()} \nEmail ${txtEM.text.toString()} \nHow did you find us? Online"
-                "TV" -> txtShow.text = "Name: ${txtFN.text.toString()} \nEmail ${txtEM.text.toString()} \nHow did you find us? TV"
-                "Radio" -> txtShow.text = "Name: ${txtFN.text.toString()} \nEmail ${txtEM.text.toString()} \nHow did you find us? Radio"
-                "Other" -> txtShow.text = "Name: ${txtFN.text.toString()} \nEmail ${txtEM.text.toString()} \nHow did you find us? Other"
+                "Online" -> txtShow.text = "Name: ${txtFN.text.toString()} Email ${txtEM.text.toString()} How did you find us? Online"
+                "TV" -> txtShow.text = "Name: ${txtFN.text.toString()} Email ${txtEM.text.toString()} How did you find us? TV"
+                "Radio" -> txtShow.text = "Name: ${txtFN.text.toString()} Email ${txtEM.text.toString()} How did you find us? Radio"
+                "Other" -> txtShow.text = "Name: ${txtFN.text.toString()} Email ${txtEM.text.toString()} How did you find us? Other"
 
             }
             hideKeyboard()
             //Challenge: Clear Fullname and Email after submit
-            txtFN.setText("")
-            txtEM.setText("")
+           
+            
           //Challenge: set focus on txtFN.Look at Week 5 Assignment
-            txtFN.requestFocus()
+            
         }
         //Fire hidekeyboard when user taps outside any text object
 //Place below code right before last right bracket in function onCreate
